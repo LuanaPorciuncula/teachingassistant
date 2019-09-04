@@ -38,3 +38,4 @@ Scenario: Concluindo o preenchimento de uma auto-avaliação mal sucedido devido
   And Peço para o sistema concluir a operação de auto-avaliação
   Then O sistema verifica que pelo menos um campo não foi auto-avaliado
   And O sistema informa que a operação foi mal sucedida e que a causa foi que pelo menos um campo não foi auto-avaliado
+  And O stakeholder pediu pra colocar este passo
