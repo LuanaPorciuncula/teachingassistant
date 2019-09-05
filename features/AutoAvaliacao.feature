@@ -46,3 +46,11 @@ Scenario: Visualizar auto-avaliações discrepantes com nenhum aluno discrepante
   When Eu seleciono a opção de “auto-avaliações discrepantes”
   Then Eu sou levado para a página de “auto-avaliações discrepantes”
   And Eu vejo 0 alunos com discrepância, 0% de discrepância e uma lista de alunos vazia.
+
+Scenario: Visualizar auto-avaliações discrepantes com 1 aluno discrepante de 3 alunos
+	Given Eu estou na página de “auto-avaliação”
+	And Eu estou logado como “professor” com o nome de usuário “Sicrano de Souza”
+	And Eu vejo uma lista de alunos com suas respectivas auto-avaliações nas metas  “Requisitos”, “Gerência de configuração”, “Gerência de projetos”, “Testes” e “Projeto e implementação” com 3 alunos, “Fulano da Silva” com as auto-avaliações “superior”, “superior”, ”igual”, ”igual” e “igual”, “Beltrano dos Santos” com as auto-avaliações “inferior”, “inferior”, “inferior”, “inferior” e “inferior” e Maria Oliveira com as auto-avaliações “igual”, “igual”, ”igual”, ”igual” e “igual”.
+	When Eu seleciono a opção de “auto-avaliações discrepantes”
+	Then Eu sou levado para a página de “auto-avaliações discrepantes”
+	And Eu vejo 1 aluno com discrepância, 33,33% de discrepância e uma lista com apenas “Fulano da Silva” com discrepância mostrando “superior”, “superior”, ”igual”, ”igual” e “igual nos conceitos das metas do aluno.
