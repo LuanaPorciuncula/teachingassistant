@@ -55,3 +55,4 @@ Scenario: Visualizar auto-avaliações discrepantes com 1 aluno discrepante de 3
 	When Eu seleciono a opção de “auto-avaliações discrepantes”
 	Then Eu sou levado para a página de “auto-avaliações discrepantes”
 	And Eu vejo 1 aluno com discrepância, 33,33% de discrepância e uma lista com apenas “Fulano da Silva” com discrepância mostrando “superior”, “superior”, ”igual”, ”igual” e “igual nos conceitos das metas do aluno.
+  And o stakeholder quer que eu corrija isso
