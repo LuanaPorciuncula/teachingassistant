@@ -60,3 +60,8 @@ Scenario: Visualizar auto-avaliações discrepantes com 1 aluno discrepante de 3
 	And Mudança para commit 1
 	And Mudança para commit 2
 	
+Scenario: visualização de percentual de discrepância
+	Given Pediram para fazer essa mudança aqui
+	When Eu faço essa mudança
+	Then A mudança será feita
+  And Pequeno ajuste
