@@ -57,3 +57,6 @@ Scenario: Visualizar auto-avaliações discrepantes com 1 aluno discrepante de 3
 	And Eu vejo 1 aluno com discrepância, 33,33% de discrepância e uma lista com apenas “Fulano da Silva” com discrepância mostrando “superior”, “superior”, ”igual”, ”igual” e “igual nos conceitos das metas do aluno.
   And o stakeholder quer que eu corrija isso
 	And Mudança da questão 14a no master
+	And Mudança para commit 1
+	And Mudança para commit 2
+	
