@@ -24,6 +24,23 @@ describe("O cadastro de alunos", () => {
     expect(aluno.metas.size).toBe(0);
   })
 
+  it("atualiza alunos corretamente", () => {
+    var aluno: Aluno = new Aluno();
+    aluno.nome = "Mariana";
+    aluno.cpf = "683";
+    cadastro.cadastrar(aluno);
+
+    aluno.metas[0] = "MA";
+    cadastro.atualizar(aluno);
+
+    aluno = cadastro.getAlunos()[0];
+    expect(aluno.nome).toBe("Mariana");
+    expect(aluno.cpf).toBe("683");
+    expect(aluno.email).toBe("");
+    expect(aluno.loginGitHub).toBe("");
+    expect(aluno.metas[0]).toBe("MA");
+  })
+
   it("não aceita alunos com CPF duplicado", () => {
     var aluno: Aluno = new Aluno();
     aluno.nome = "Mariana";
